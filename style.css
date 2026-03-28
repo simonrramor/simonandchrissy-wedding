@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #2c2c2c;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.prelude {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #888;
+}
+
+.names {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.ampersand {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0.05em;
+}
