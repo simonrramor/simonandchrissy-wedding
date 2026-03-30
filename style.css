@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Priestacy";
+  src: url("Priestacy.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -81,7 +89,7 @@ body {
 .nav-link {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -102,73 +110,96 @@ body {
 }
 
 .venue-section {
-  position: relative;
-  margin: 0 60px;
-  height: 90vh;
-}
-
-.venue-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.venue-overlay {
-  position: absolute;
-  top: 60px;
-  left: 60px;
-  right: 60px;
-  bottom: 60px;
-  background: #33419A;
-  display: flex;
-  align-items: center;
-  padding: 4rem;
-}
-
-.schedule {
-  color: #fff;
-  font-family: "Cormorant Garamond", serif;
-  max-width: 50%;
+  padding: 6rem 60px;
 }
 
 .schedule-title {
+  font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   font-weight: 400;
+  color: #333333;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-.schedule-day {
-  margin-bottom: 2rem;
+.timeline {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
-.schedule-day-title {
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
-  opacity: 0.7;
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #333333;
+  transform: translateX(-50%);
 }
 
-.schedule-item {
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 0;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #333333;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item.left {
+  padding-right: 2.5rem;
+  text-align: right;
+}
+
+.timeline-item.left::after {
+  right: -4px;
+}
+
+.timeline-item.right {
+  margin-left: 50%;
+  padding-left: 2.5rem;
+  text-align: left;
+}
+
+.timeline-item.right::after {
+  left: -4px;
+}
+
+.timeline-content {
   display: flex;
-  gap: 2rem;
-  padding: 0.4rem 0;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.schedule-time {
-  font-size: 14px;
+.timeline-time {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  color: #333333;
   letter-spacing: 0.5px;
-  white-space: nowrap;
-  opacity: 0.7;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
-.schedule-event {
-  font-size: 14px;
+.timeline-event {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .heading,
@@ -204,6 +235,14 @@ body {
   text-align: center;
 }
 
+.dress-code-img {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
 .dress-code-title {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
@@ -226,7 +265,7 @@ body {
 
 .gifts {
   padding: 6rem 60px;
-  text-align: center;
+  text-align: left;
 }
 
 .gifts-title {
@@ -246,12 +285,11 @@ body {
   line-height: 1.8;
   color: #333333;
   max-width: 500px;
-  margin: 0 auto;
 }
 
 .where-to-stay {
   padding: 6rem 60px;
-  text-align: center;
+  text-align: left;
 }
 
 .where-to-stay-title {
@@ -271,12 +309,12 @@ body {
   line-height: 1.8;
   color: #333333;
   max-width: 500px;
-  margin: 0 auto 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .stay-options {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3rem;
   flex-wrap: wrap;
 }
@@ -290,20 +328,96 @@ body {
   font-weight: 600;
   font-size: 16px;
   color: #333333;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.stay-option-name:hover {
+  opacity: 0.6;
 }
 
 .stay-option-detail {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.8;
+  color: #333333;
+  opacity: 0.7;
+}
+
+.getting-there {
+  padding: 6rem 60px;
+  text-align: left;
+}
+
+.getting-there-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.getting-there-left {
+  flex: 1;
+}
+
+.getting-there-crest {
+  width: 160px;
+  height: auto;
+  margin-left: 4rem;
+}
+
+.getting-there-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.getting-there-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.travel-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.travel-option {
+  max-width: 240px;
+}
+
+.travel-option-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.travel-option-detail {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
   color: #333333;
   opacity: 0.7;
 }
 
 .faq {
   padding: 6rem 60px;
-  text-align: center;
+  text-align: left;
 }
 
 .faq-title {
@@ -313,12 +427,12 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #333333;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .faq-item {
   max-width: 500px;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem;
 }
 
 .faq-question {
@@ -335,6 +449,24 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: #333333;
+}
+
+.photo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.names-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Priestacy", cursive;
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: #c94c4c;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .photo {

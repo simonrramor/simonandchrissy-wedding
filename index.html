@@ -28,56 +28,63 @@
       <a href="#dress-code" class="nav-link">Dress Code</a>
       <a href="#gifts" class="nav-link">Gifts</a>
       <a href="#where-to-stay" class="nav-link">Where to Stay</a>
+      <a href="#getting-there" class="nav-link">Getting There</a>
       <a href="#faq" class="nav-link">FAQ</a>
     </div>
   </nav>
   <main class="hero">
     <p class="heading">We're getting married</p>
-    <img src="photo.png" alt="Christina and Simon" class="photo">
+    <div class="photo-wrapper">
+      <img src="photo.png" alt="Christina and Simon" class="photo">
+      <h1 class="names-overlay">Chrissy & Simon</h1>
+    </div>
     <p class="date">July 11, 2026</p>
     <p class="venue">Hartham Park, Corsham, Wiltshire SN13 0RP</p>
   </main>
   <section id="schedule" class="venue-section">
-    <img src="venue.png" alt="Hartham Park" class="venue-img">
-    <div class="venue-overlay">
-      <div class="schedule">
-        <h2 class="schedule-title">Schedule</h2>
+    <h2 class="schedule-title">Schedule</h2>
 
-        <div class="schedule-day">
-          <h3 class="schedule-day-title">Friday 10th July</h3>
-          <div class="schedule-item">
-            <span class="schedule-time">8:00 PM</span>
-            <span class="schedule-event">Welcome Dinner (Optional)</span>
-          </div>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <span class="timeline-time">1pm</span>
+          <span class="timeline-event">Guests Arrive</span>
         </div>
-
-        <div class="schedule-day">
-          <h3 class="schedule-day-title">Saturday 11th July</h3>
-          <div class="schedule-item">
-            <span class="schedule-time">1:00 PM</span>
-            <span class="schedule-event">Guests Arrive</span>
-          </div>
-          <div class="schedule-item">
-            <span class="schedule-time">2:00 PM</span>
-            <span class="schedule-event">Ceremony</span>
-          </div>
-          <div class="schedule-item">
-            <span class="schedule-time">3:00 PM</span>
-            <span class="schedule-event">Reception</span>
-          </div>
-          <div class="schedule-item">
-            <span class="schedule-time">5:30 PM</span>
-            <span class="schedule-event">Wedding Dinner</span>
-          </div>
-          <div class="schedule-item">
-            <span class="schedule-time">8:00 PM</span>
-            <span class="schedule-event">Party</span>
-          </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <span class="timeline-time">2pm</span>
+          <span class="timeline-event">Ceremony</span>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <span class="timeline-time">3pm</span>
+          <span class="timeline-event">Reception</span>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <span class="timeline-time">5.30pm</span>
+          <span class="timeline-event">Wedding Dinner</span>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <span class="timeline-time">8pm</span>
+          <span class="timeline-event">Party</span>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <span class="timeline-time">10pm</span>
+          <span class="timeline-event">Carriages</span>
         </div>
       </div>
     </div>
   </section>
   <section id="dress-code" class="dress-code">
+    <img src="dresscode.png" alt="Formal attire" class="dress-code-img">
     <h2 class="dress-code-title">Dress Code</h2>
     <p class="dress-code-text">We kindly request formal attire for our celebration. Think suits, ties, and elegant dresses. Please save the white for the bride.</p>
   </section>
@@ -90,17 +97,41 @@
     <p class="where-to-stay-text">There are a number of lovely options nearby for those travelling from further afield.</p>
     <div class="stay-options">
       <div class="stay-option">
-        <h3 class="stay-option-name">The Methuen Arms</h3>
+        <a href="https://themethuenarms.com" target="_blank" class="stay-option-name">The Methuen Arms</a>
         <p class="stay-option-detail">Corsham — 5 min drive</p>
       </div>
       <div class="stay-option">
-        <h3 class="stay-option-name">Lucknam Park Hotel & Spa</h3>
+        <a href="https://www.lucknampark.co.uk" target="_blank" class="stay-option-name">Lucknam Park Hotel & Spa</a>
         <p class="stay-option-detail">Colerne — 10 min drive</p>
       </div>
       <div class="stay-option">
-        <h3 class="stay-option-name">The Bear Hotel</h3>
+        <a href="https://www.thebearhoteldevizes.co.uk" target="_blank" class="stay-option-name">The Bear Hotel</a>
         <p class="stay-option-detail">Devizes — 20 min drive</p>
       </div>
+    </div>
+  </section>
+  <section id="getting-there" class="getting-there">
+    <div class="getting-there-content">
+      <div class="getting-there-left">
+        <h2 class="getting-there-title">How to Get There</h2>
+        <p class="getting-there-text">Hartham Park is located in the village of Corsham, Wiltshire. There is parking available on site.</p>
+        <div class="travel-options">
+          <div class="travel-option">
+            <h3 class="travel-option-name">By Air</h3>
+            <p class="travel-option-detail">Heathrow Airport — 1 hr 30 min drive</p>
+            <p class="travel-option-detail">Bristol Airport — 45 min drive</p>
+          </div>
+          <div class="travel-option">
+            <h3 class="travel-option-name">By Train</h3>
+            <p class="travel-option-detail">Chippenham Station — 10 min taxi</p>
+          </div>
+          <div class="travel-option">
+            <h3 class="travel-option-name">By Car</h3>
+            <p class="travel-option-detail">Hartham Park, Corsham, Wiltshire SN13 0RP</p>
+          </div>
+        </div>
+      </div>
+      <img src="hartham-crest.png" alt="Hartham Park crest" class="getting-there-crest">
     </div>
   </section>
   <section id="faq" class="faq">
@@ -116,10 +147,6 @@
     <div class="faq-item">
       <h3 class="faq-question">Are children welcome?</h3>
       <p class="faq-answer">Whilst we love your little ones, we have chosen to make our wedding an adults-only celebration. We hope this gives you a chance to enjoy the evening.</p>
-    </div>
-    <div class="faq-item">
-      <h3 class="faq-question">How do I get there?</h3>
-      <p class="faq-answer">Hartham Park is located in Corsham, Wiltshire. There is parking available on site. The nearest train station is Chippenham, approximately 10 minutes by taxi.</p>
     </div>
   </section>
 </body>
